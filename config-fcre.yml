@@ -6,35 +6,8 @@ gmail:
 email:
   sender: SCC
   subject: Daily FCR Forecast and Graphs
-  body: "Hello from Jetstream 2!\n\nHere are today's forecast and graphs. Have a wonderful day!\n\nBests,\nSCC and CIBR Team"
+  body: "Hello from GitHub Actions!\n\nHere are today's forecast and graphs. \n\nhttps://flare-forecast.org/flare-dashboard/fcre.html\n\nHave a wonderful day!\n\nBests,\nSCC and CIBR Team"
   attachments_web:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/bvre-ice-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/bvre-mixing-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/ccre-ice-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/ccre-mixing-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/fcre-ice-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/fcre-mixing-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/fcre-temp-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/unnamed-chunk-12-1.png
-      infix:
-      suffix:
-    - prefix: https://github.com/FLARE-forecast/flare-dashboard/raw/main/docs/fcre_files/figure-html/unnamed-chunk-9-1.png
-      infix:
-      suffix:
     - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/BVRDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
@@ -55,6 +28,4 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    - y.ku@ufl.edu
     - vdaneshmand@acis.ufl.edu
-    - renato@ece.ufl.edu
