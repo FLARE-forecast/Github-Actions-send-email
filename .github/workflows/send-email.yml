@@ -1,6 +1,8 @@
 name: 'send-email'
 on:
   workflow_dispatch
+  schedule:
+    - cron: '20 * * * *'
 
 jobs:
   test-update-file:
