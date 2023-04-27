@@ -27,4 +27,6 @@ email:
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
   attachments_local:
-  recipients: vdaneshmand@acis.ufl.edu,v.daneshmand@gmail.com
+  recipients:
+    - vdaneshmand@acis.ufl.edu
+    - v.daneshmand@gmail.com
