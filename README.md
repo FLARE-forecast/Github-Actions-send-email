@@ -23,16 +23,16 @@ Edit yaml file
 gmail:
   username:
   password:
-  from: SCC
+  from: CIBR
 ```
 > "username" and "password" variables will be added by secrets when executing Github action. "From" variable is used as sender's name.
 
 
 ```yaml
 email:
-  sender: SCC
+  sender: CIBR
   subject: Daily FCR Forecast and Graphs
-  body: "Hello from Jetstream 2!\n\nHere are today's forecast and graphs. Have a wonderful day!\n\nBests,\nSCC and CIBR Team"
+  body: "Hello from Jetstream 2!\n\nHere are today's forecast and graphs.\n\nhttps://flare-forecast.org/flare-dashboard/fcre.html\n\nHave a wonderful day!\n\nBests,\nSCC and CIBR Team"
 ```
 
 > "Subject" variable is used to be email subject.
@@ -96,6 +96,6 @@ recipients:
 ```yaml
       - name: Run send-email container
         run: |
-          docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-fcre.yml" yjungku/send-email:dev
+          docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-fcre.yml" flareforecast/send-email:latest
 
 ```
