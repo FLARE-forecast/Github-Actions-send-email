@@ -28,7 +28,4 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    - vdaneshmand@acis.ufl.edu
-    - v.daneshmand@gmail.com
-    - renato@ece.ufl.edu
-    - cayelan@vt.edu
+    - scc-daily-email-g@vt.edu
