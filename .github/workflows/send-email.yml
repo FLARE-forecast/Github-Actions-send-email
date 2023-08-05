@@ -1,4 +1,4 @@
-name: 'send-email'
+name: 'send-email-fcre'
 on:
   workflow_dispatch:
   schedule:
