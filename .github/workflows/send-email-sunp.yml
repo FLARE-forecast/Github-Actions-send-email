@@ -31,7 +31,16 @@ jobs:
           
       - name: Cat .yml
         run: cat ${{ github.workspace }}/config-sunp.yml
-      
+        
+      - name: Update Last Run Date
+        run: |
+          echo "Last Run: $(date)" >> last-run.txt
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add last-run.txt
+          git commit -m "Update last run date"
+          git push
+          
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
