@@ -2,7 +2,7 @@ name: 'send-email-fcre'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '00 11 * * *'
+    - cron: '30 10 * * *'
 
 jobs:
   test-update-file:
