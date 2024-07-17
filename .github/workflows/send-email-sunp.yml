@@ -34,9 +34,9 @@ jobs:
         
       - name: Update Last Run Date
         run: |
-          git pull
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
+          git pull
           echo "SUNP Sent: $(date)" >> last-run.txt
           git add last-run.txt
           git commit -m "Update last run date"
