@@ -5,7 +5,7 @@ gmail:
   from: CIBR
 email:
   sender: CIBR
-  subject: Daily CCR Forecast and Graphs
+  subject: Daily CCR Graphs
   body: "Hello from GitHub Actions!\n\nHere are today's graphs. \n\nhttps://flare-forecast.org/flare-dashboard/fcre.html\n\nHave a wonderful day!\n\nBests,\nSCC and CIBR Team"
   attachments_web:
     - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/CCRMetDataFigures_
