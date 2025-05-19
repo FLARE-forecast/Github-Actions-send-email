@@ -16,4 +16,4 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    - scc-daily-email-g@vt.edu
+    - ccr-daily-email-g@vt.edu
