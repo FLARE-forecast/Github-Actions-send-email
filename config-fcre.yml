@@ -8,13 +8,13 @@ email:
   subject: Daily FCR Forecast and Graphs
   body: "Hello from GitHub Actions!\n\nHere are today's forecast and graphs. \n\nhttps://flare-forecast.org/flare-dashboard/fcre.html\n\nHave a wonderful day!\n\nBests,\nSCC and CIBR Team"
   attachments_web:
-    - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/BVRDataFigures_
+    - prefix: https://github.com/FLARE-forecast/BVRE-data/raw/bvre-graphs/BVRDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
-    - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/CCRMetDataFigures_
+    - prefix: https://github.com/FLARE-forecast/CCRE-data/raw/ccre-graphs/CCRMetDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
-    - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/CCRWaterQualityDataFigures_
+    - prefix: https://github.com/FLARE-forecast/CCRE-data/raw/ccre-graphs/CCRWaterQualityDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
     - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/FCRCatwalkDataFigures_
