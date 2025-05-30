@@ -2,7 +2,7 @@ name: 'send-email-sunp'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '58 10 * * *'
 
 jobs:
   test-update-file:
@@ -47,7 +47,18 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-      - name: Run send-email container
+
+      - name: Pull send-email image with timestamps
         run: |
-          docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-sunp.yml" flareforecast/send-email:latest
+          echo "Pull start: $(date +'%Y-%m-%dT%H:%M:%S%z')"
+          docker pull flareforecast/send-email:latest
+          echo "Pull end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
+
+      - name: Run send-email container with timestamps
+        run: |
+          echo "Run start: $(date +'%Y-%m-%dT%H:%M:%S%z')"
+          docker run --rm \
+            -v ${{ github.workspace }}:/root/flare/config \
+            --env CONFIG_FILE="/root/flare/config/config-sunp.yml" \
+            flareforecast/send-email:latest
+          echo "Run end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
