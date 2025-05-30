@@ -1,0 +1,64 @@
+name: 'send-email-sunp'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '58 10 * * *'
+
+jobs:
+  test-update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: Update gmail_username
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: 'config-sunp.yml'
+          propertyPath: gmail.username
+          value: ${{ secrets.GMAIL_USERNAME }}
+          commitChange: false
+    
+      - name: Update gmail_password
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: 'config-sunp.yml'
+          propertyPath: gmail.password
+          value: ${{ secrets.GMAIL_PASSWORD }}
+          commitChange: false
+          
+      - name: Cat .yml
+        run: cat ${{ github.workspace }}/config-sunp.yml
+        
+      - name: Update Last Run Date
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git pull
+          echo "SUNP Sent: $(date)" >> last-run.txt
+          git add last-run.txt
+          git commit -m "Update last run date"
+          git push
+          
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Pull send-email image with timestamps
+        run: |
+          echo "Pull start: $(date +'%Y-%m-%dT%H:%M:%S%z')"
+          docker pull flareforecast/send-email:latest
+          echo "Pull end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
+
+      - name: Run send-email container with timestamps
+        run: |
+          echo "Run start: $(date +'%Y-%m-%dT%H:%M:%S%z')"
+          docker run --rm \
+            -v ${{ github.workspace }}:/root/flare/config \
+            --env CONFIG_FILE="/root/flare/config/config-sunp.yml" \
+            flareforecast/send-email:latest
+          echo "Run end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
