@@ -21,5 +21,5 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    # - sunapee-daily-email-g@vt.edu
-    - zhuzeh@oregonstate.edu, v.daneshmand@gmail.com
+    - sunapee-daily-email-g@vt.edu
+    # - zhuzeh@oregonstate.edu, v.daneshmand@gmail.com
