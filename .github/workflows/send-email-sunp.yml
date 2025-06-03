@@ -6,7 +6,7 @@ on:
 
 jobs:
   test-update-file:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout files
         uses: actions/checkout@v2
