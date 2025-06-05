@@ -53,7 +53,7 @@ jobs:
         run: |
           set -x
           echo "Pull start: $(date +'%Y-%m-%dT%H:%M:%S%z')"
-          docker pull flareforecast/send-email:latest
+          docker pull flareforecast/send-email:test
           echo "Pull end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
           echo "Run start: $(date +'%Y-%m-%dT%H:%M:%S%z')" 
           docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-sunp.yml" flareforecast/send-email:latest
