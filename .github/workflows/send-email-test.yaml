@@ -56,5 +56,5 @@ jobs:
           echo "Pull end:   $(date +'%Y-%m-%dT%H:%M:%S%z')"
           docker images
           echo "Run start: $(date +'%Y-%m-%dT%H:%M:%S%z')" 
-          docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-test.yml" flareforecast/send-email:latest
+          docker run --rm -v ${{ github.workspace }}:/root/flare/config --env CONFIG_FILE="/root/flare/config/config-test.yml" flareforecast/send-email:test
           echo "Run end:   $(date +'%Y-%m-%dT%H:%M:%S%z')" 
