@@ -7,12 +7,12 @@ email:
   subject: Daily SUNP Graphs
   body: "Hello from GitHub Actions!\n\nHere are today's forecast and graphs. Have a wonderful day!\n\nBests,\nSCC and CIBR Team"
   attachments_web:
-    - prefix: https://s3.flare-forecast.org/analysis/sunp/sunp-
-      infix: date -d '1 day ago' '+%Y-%m-%d'
-      suffix: -sunp_V3.pdf
-    - prefix: https://s3.flare-forecast.org/analysis/sunp/sunp_V3_35day_simple_plot_
-      infix: date -d '0 day ago' '+%Y-%m-%d'
-      suffix: .pdf
+    # - prefix: https://s3.flare-forecast.org/analysis/sunp/sunp-
+    #   infix: date -d '1 day ago' '+%Y-%m-%d'
+    #   suffix: -sunp_V3.pdf
+    # - prefix: https://s3.flare-forecast.org/analysis/sunp/sunp_V3_35day_simple_plot_
+    #   infix: date -d '0 day ago' '+%Y-%m-%d'
+    #   suffix: .pdf
     - prefix: https://github.com/FLARE-forecast/SUNP-data/raw/sunp-graphs/sunpMetDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
