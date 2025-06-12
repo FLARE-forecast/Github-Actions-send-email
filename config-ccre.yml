@@ -16,4 +16,5 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    - ccr-daily-email-g@vt.edu
+    # - ccr-daily-email-g@vt.edu
+    - zhuzeh@oregonstate.edu
