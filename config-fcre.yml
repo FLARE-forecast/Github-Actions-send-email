@@ -34,5 +34,5 @@ email:
       suffix: .pdf
   attachments_local:
   recipients:
-    - scc-daily-email-g@vt.edu
-    # - zhuzeh@oregonstate.edu
+    # - scc-daily-email-g@vt.edu
+    - zhuzeh@oregonstate.edu

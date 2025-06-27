@@ -6,7 +6,9 @@ on:
 
 jobs:
   test-update-file:
-    runs-on: self-hosted
+    runs-on: 
+      - self-hosted
+      - backup
     steps:
       - name: Checkout files
         uses: actions/checkout@v2
