@@ -17,6 +17,9 @@ email:
     - prefix: https://github.com/FLARE-forecast/CCRE-data/raw/ccre-graphs/CCRWaterQualityDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
+    - prefix: https://github.com/FLARE-forecast/CCRE-data/raw/ccre-graphs/CCRE_EddyFluxDataFigures_
+      infix: date -d '0 day ago' '+%Y-%m-%d'
+      suffix: .pdf
     - prefix: https://github.com/FLARE-forecast/FCRE-data/raw/wvwa-graphs/FCRCatwalkDataFigures_
       infix: date -d '0 day ago' '+%Y-%m-%d'
       suffix: .pdf
