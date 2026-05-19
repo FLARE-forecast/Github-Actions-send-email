@@ -2,7 +2,7 @@ name: 'send-email-ccre'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '5 11 * * *'
 
 jobs:
   test-update-file:
