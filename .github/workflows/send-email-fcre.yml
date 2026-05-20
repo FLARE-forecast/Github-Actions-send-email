@@ -1,6 +1,6 @@
 name: 'send-email-fcre'
-# on:
-#   workflow_dispatch:
+on:
+  workflow_dispatch:
 #   schedule:
 #     - cron: '5 11 * * *'
 
