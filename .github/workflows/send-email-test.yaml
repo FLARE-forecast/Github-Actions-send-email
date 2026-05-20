@@ -2,7 +2,7 @@ name: 'send-email-test'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '32 9 * * *'
+    - cron: '40 9 * * *'
 
 jobs:
   test-update-file:
