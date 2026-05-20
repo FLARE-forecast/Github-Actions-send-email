@@ -1,8 +1,8 @@
 name: 'send-email-sunp'
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '5 11 * * *'
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '5 11 * * *'
 
 jobs:
   test-update-file:
